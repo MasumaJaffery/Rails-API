@@ -9,7 +9,8 @@ module Api
             name: item.name,
             city: item.city,
             description: item.description,
-            price: item.price
+            price: item.price,
+            image: item.image
           }
         end
         render json: items
@@ -52,7 +53,7 @@ module Api
       end
 
       def item_params
-        params.permit(:name, :city, :description, :price)
+        params.permit(:name, :city, :description, :price, :image)
       end
     end
   end
